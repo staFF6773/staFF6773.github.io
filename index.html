@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotStaff - Portafolio</title>
+    <!-- Tailwind CSS y DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/daisyui@1.14.0/dist/full.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/animations.css">
+    <link rel="stylesheet" href="./public/css/google.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./public/js/menu.js"></script>
+    <script src="./public/js/google.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Header -->
+    <header class="bg-transparent fixed w-full z-50">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <h1 id="siteTitle" class="text-4xl font-extrabold text-white tracking-tight ml-10">NotStaff</h1>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#about" id="aboutLink" class="nav-link hover:text-yellow-500 transition duration-300">Sobre mí</a></li>
+                <li><a href="#projects" id="projectsLink" class="nav-link hover:text-yellow-500 transition duration-300">Proyectos</a></li>
+                <li><a href="#services" id="servicesLink" class="nav-link hover:text-yellow-500 transition duration-300">Servicios</a></li>
+                <li><a href="/contributions.html" id="contributionsLink" class="nav-link hover:text-yellow-500 transition duration-300">Contributions</a></li>
+            </ul>
+        <!-- Botón de selección de idioma -->
+        <div class="relative inline-block text-left">
+            <div>
+                <button id="languageButton" type="button" class="inline-flex justify-center w-40 rounded-full border border-gray-600 shadow-lg px-4 py-2 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white font-semibold hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 ml-8" aria-haspopup="true">
+                    <span id="languageSelect">Seleccionar Idioma</span>
+                    <svg class="w-5 h-5 ml-2 -mr-1 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                         
+            </div>
+            <div id="languageMenu" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 hidden">
+                <div class="py-1">
+                    <a href="#" data-lang="es" class="language-option block px-4 py-2 text-sm text-gray-100 hover:bg-gray-700 hover:text-white">Español</a>
+                    <a href="#" data-lang="en" class="language-option block px-4 py-2 text-sm text-gray-100 hover:bg-gray-700 hover:text-white">English</a>
+                </div>
+            </div>
+        </div>
+
+    <!-- Contenedor de Google Translate -->
+    <div id="google_translate_element"></div>
+                                        
+    </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center py-12 bg-fixed bg-cover bg-center" style="background-image: url('/public/img/image_2022-09-26_102515990.png');" data-aos="fade-up" data-aos-once="false">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 px-4">
+            <h2 class="text-6xl font-extrabold text-white mb-4" data-aos="fade-up">Construyendo el Futuro</h2>
+            <p class="text-2xl text-gray-100 mb-8" data-aos="fade-up" data-aos-delay="200">Soluciones digitales que transforman ideas en realidad.</p>
+            <a href="#about" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-lg font-semibold text-white transition-all duration-200 rounded-lg group bg-gradient-to-br from-yellow-400 to-yellow-600 group-hover:from-yellow-400 group-hover:to-yellow-600 hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-yellow-300" data-aos="fade-up" data-aos-delay="400">
+                <span class="relative px-5 py-2.5 transition-all ease-in duration-200 bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Explora mi trabajo
+                </span>
+            </a>            
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-20 px-4">
+    <!-- About Section -->
+    <section id="about" class="mb-24" data-aos="fade-right" data-aos-once="false">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="relative mb-8">
+                    <h2 class="text-5xl font-bold text-yellow-500 mb-8 relative z-10">Sobre mí</h2>
+                    <img src="/public/img/68747470733a2f2f692e706f7374696d672e63632f72467377385038792f77616966752e706e67 (1).png" alt="Waifu" class="waifu-image">
+                </div>                                       
+                <p id="aboutText" class="text-xl leading-relaxed text-gray-300">Soy un desarrollador apasionado por crear aplicaciones web intuitivas y escalables. Con experiencia en múltiples tecnologías, me especializo en ofrecer soluciones que combinan funcionalidad y estética.</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg" data-aos="fade-left">
+                <img src="https://avatars.githubusercontent.com/u/108166164?v=4" alt="Mi foto" class="rounded-lg">
+            </div>
+        </div>
+    </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-24" data-aos="fade-up" data-aos-once="false">
+            <h2 class="text-5xl font-bold text-yellow-500 mb-12 text-center">Proyectos Recientes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Proyecto 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://github.com/NakamaStream/Resources/blob/main/NakamaStream.png?raw=true" alt="Proyecto 1" class="mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">NakamaStream</h3>
+                    <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Anime</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Streaming</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Open Source</span>
+                    </div>
+                    <p>NakamaStream es una plataforma de streaming gratuita diseñada para los entusiastas del anime, desarrollada por un equipo en América Latina. Nuestro objetivo es brindar acceso a contenido de anime a aquellos que no tienen los recursos para suscribirse a servicios legales de streaming.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/NakamaStream/NakamaStream" class="text-yellow-500 font-semibold">Ver en GitHub</a>
+                        <p class="text-sm text-gray-400">Estrellas: <span id="stars-nakama">N/A</span></p>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://raw.githubusercontent.com/Sstudios-Dev/Betterpvp-2.0/master/.github/BETTERPVP2.png" alt="Proyecto 2" class="mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Betterpvp</h3>
+                    <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Minecraft</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">PvP</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Plugin</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Open Source</span>
+                    </div>
+                    <p>BetterPvP es un complemento de Minecraft diseñado para la comunidad de Minecraft, que se centra en gestionar y mejorar la dinámica jugador contra jugador (PvP) dentro del juego. Este complemento proporciona una variedad de herramientas y configuraciones destinadas a equilibrar la experiencia de combate entre los jugadores, fomentando un entorno competitivo y equitativo. Desde ajustes de reglas hasta funciones de seguimiento y análisis estadístico, BetterPvP se ha convertido en un componente esencial para los servidores que buscan ofrecer una experiencia PvP refinada, atendiendo tanto a jugadores casuales como competitivos.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/Sstudios-Dev/Betterpvp-2.0" class="text-yellow-500 font-semibold">Ver en GitHub</a>
+                        <p class="text-sm text-gray-400">Estrellas: <span id="stars-betterpvp">N/A</span></p>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="/public/img/775d7d4e-f8a8-42e1-b0f6-1a80491fafb3.png" alt="Proyecto 3" class="mb-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">teaching feeling - Launcher</h3>
+                    <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">Launcher</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">fan-game</span>
+                        <span class="bg-yellow-500 text-gray-900 py-1 px-3 rounded-full text-sm font-semibold">+18</span>
+                    </div>
+                    <p>Este es un launcher no oficial para el juego Teaching Feeling con contenido para mayores de 18 años. El lanzador incluye versiones del juego creadas por fanáticos en diversos idiomas, lo que permite a los jugadores disfrutar de la experiencia en su idioma preferido. 😗</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/SpanishHgames/teaching-feeling---Launcher" class="text-yellow-500 font-semibold">Ver en GitHub</a>
+                        <p class="text-sm text-gray-400">Estrellas: <span id="stars-teaching-feeling">N/A</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-24 bg-gray-800 py-16 rounded-lg" data-aos="fade-left" data-aos-once="false">
+            <h2 class="text-5xl font-bold text-yellow-500 mb-12 text-center">Servicios</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="mb-4">
+                        <span class="inline-block p-6 bg-yellow-500 rounded-full text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Desarrollo Web</h3>
+                    <p>Diseño y desarrollo de páginas web modernas, completamente responsivas y optimizadas para un rendimiento superior.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-4">
+                        <span class="inline-block p-6 bg-yellow-500 rounded-full text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Bots para Discord</h3>
+                    <p>Desarrollo y personalización de bots de Discord para automatizar tareas y mejorar la interacción en tu servidor.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-4">
+                        <span class="inline-block p-6 bg-yellow-500 rounded-full text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-filetype-java" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.521 15.175a1.3 1.3 0 0 1-.082-.466h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466V11.85h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.568-.094 1.1 1.1 0 0 1-.408-.266 1.1 1.1 0 0 1-.243-.39m3.972-.354-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028zm1.178-.59-.49-1.616h-.035l-.49 1.617zm2.342 1.618h.952l1.327-3.999h-.878l-.888 3.138h-.038L8.59 11.85h-.917zm3.087-1.028-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028zm1.178-.59-.49-1.616h-.035l-.49 1.617z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Plugins para Minecraft</h3>
+                    <p>Creación de plugins personalizados para Minecraft, mejorando la jugabilidad y añadiendo funcionalidades únicas a tu servidor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizations Section -->
+        <section id="organizations" class="mb-24" data-aos="fade-up" data-aos-once="false">
+            <h2 class="text-5xl font-bold text-yellow-500 mb-12 text-center">Organizaciones con las que Trabajo</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://avatars.githubusercontent.com/u/156860248?s=200&v=4" alt="Organización 1" class="w-full h-32 object-contain mx-auto mb-4">
+                    <h4 class="text-xl font-semibold text-yellow-500 text-center">SstudiosDev</h4>
+                    <p class="text-lg text-gray-300 text-center">Somos un estudio independiente de desarrolladores de plugins de Minecraft y otros proyectos.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://avatars.githubusercontent.com/u/168317328?s=200&v=4" alt="Organización 2" class="w-full h-32 object-contain mx-auto mb-4">
+                    <h4 class="text-xl font-semibold text-yellow-500 text-center">NakamaStream OpenSource</h4>
+                    <p class="text-lg text-gray-300 text-center">NakamaStream es una plataforma de streaming de anime que ofrece una experiencia sin anuncios y completamente gratuita para todos los amantes del anime.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://avatars.githubusercontent.com/u/162644772?s=200&v=4" alt="Organización 3" class="w-full h-32 object-contain mx-auto mb-4">
+                    <h4 class="text-xl font-semibold text-yellow-500 text-center">SpanishHgames</h4>
+                    <p class="text-lg text-gray-300 text-center">Nos dedicamos a traducir juegos +18 de novela visual al español para el público hispanohablante. Nuestra pasión radica en hacer que estas experiencias de juego sean accesibles y agradables para los jugadores hispanohablantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media" class="mb-24" data-aos="fade-right" data-aos-once="false">
+            <h2 class="text-5xl font-bold text-yellow-500 mb-12 text-center">Visita mis redes sociales</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="https://github.com/staFF6773" target="_blank" class="text-gray-300 hover:text-yellow-500 transition duration-300">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>
+                <a href="https://www.tiktok.com/@notstaffofi_" target="_blank" class="text-gray-300 hover:text-yellow-500 transition duration-300">
+                    <i class="fab fa-tiktok fa-3x"></i>
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561199325937481/" target="_blank" class="text-gray-300 hover:text-yellow-500 transition duration-300">
+                    <i class="fab fa-steam fa-3x"></i>
+                </a>
+                <a href="https://discord.com/invite/Rdz4yQneMK" target="_blank" class="text-gray-300 hover:text-yellow-500 transition duration-300">
+                    <i class="fab fa-discord fa-3x"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center text-gray-400 py-6">
+        <p>&copy; 2024 Notstaff. Todos los derechos reservados.</p>
+    </footer>
+
+        <!-- Scroll Up Button -->
+        <a href="#top" id="scrollUp" class="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center rounded-full bg-yellow-500 text-white shadow-lg hover:bg-yellow-600 transition duration-300">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+</body>
+</html>
