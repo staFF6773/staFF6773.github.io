@@ -1,0 +1,57 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f1e4; /* Light parchment-like color */
+    color: #333;
+}
+
+header {
+    background-color: #d6cda4; /* Light beige color */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #bfae8a; /* Slightly darker beige border */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.download-section {
+    text-align: center;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border: 2px solid #bfae8a; /* Beige border */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-section p:last-of-type {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a; /* Darker grey for emphasis */
+    margin-top: 15px;
+}
+
+
+.download-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #bfae8a; /* Beige button */
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #a89f7f; /* Slightly darker beige border */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background-color: #9e8b6a; /* Darker beige on hover */
+}
