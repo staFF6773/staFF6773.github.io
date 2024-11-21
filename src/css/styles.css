@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        body.dark {
+            background: linear-gradient(to bottom right, #001f1d, #000);
+            color: #e0f2f1;
+        }
+
+        body.dark .bg-white {
+            background-color: rgba(0, 31, 29, 0.8);
+        }
+
+        body.dark .text-gray-700 {
+            color: #b0bec5;
+        }
+
+        body.dark .text-gray-800 {
+            color: #e0f2f1;
+        }
+
+        body.dark .bg-frieren-light {
+            background-color: rgba(0, 51, 46, 0.8);
+        }
+
+        body.dark .text-frieren-dark {
+            color: #4db6ac;
+        }
+
+        body.dark .from-frieren-light {
+            --tw-gradient-from: #001f1d;
+            --tw-gradient-to: #000;
+        }
+
+        body.dark .to-white {
+            --tw-gradient-to: #001f1d;
+        }
+
+        /* Estilo general del scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px; /* Ancho del scrollbar */
+            height: 12px; /* Ancho del scrollbar horizontal */
+        }
+
+        /* Fondo del track */
+        ::-webkit-scrollbar-track {
+            background: rgba(38, 166, 154, 0.1); /* Fondo sutil */
+            border-radius: 10px; /* Bordes redondeados */
+            transition: background-color 0.3s;
+        }
+
+        /* Track interactivo */
+        ::-webkit-scrollbar-track:hover {
+            background: rgba(38, 166, 154, 0.2); /* Más visible al hacer hover */
+        }
+
+        /* Estilo del thumb */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #26a69a, #00796b); /* Degradado atractivo */
+            border-radius: 10px; /* Bordes redondeados */
+            border: 2px solid transparent; /* Espacio entre track y thumb */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+            transition: background-color 0.3s, height 0.3s, box-shadow 0.3s;
+        }
+
+        /* Thumb interactivo */
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #00796b, #004d40); /* Degradado más oscuro */
+            height: 18px; /* Se alarga al hacer hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombras más profundas */
+        }
+
+        /* Scrollbar en modo oscuro */
+        body.dark ::-webkit-scrollbar-track {
+            background: rgba(0, 31, 29, 0.3); /* Fondo más oscuro */
+        }
+
+        body.dark ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #004d40, #001f1d); /* Degradado oscuro */
+        }
+
+        body.dark ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #001f1d, #000); /* Acento al hacer hover */
+        }
+
+        .flower {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FFB3BA" d="M50 0 C60 30 70 50 100 50 C70 60 60 70 50 100 C40 70 30 60 0 50 C30 40 40 30 50 0"/></svg>') no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+            transition: transform 0.3s ease-out;
+        }
+        .parallax {
+            transition: transform 0.1s ease-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
