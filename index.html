@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notstaff - Portafolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/108166164?v=4" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="./src/js/script.js"></script>
@@ -15,51 +17,53 @@
 <body class="bg-gradient-to-br from-frieren-light to-white min-h-screen font-frieren text-gray-800 transition-all duration-300">
     <div id="flower-container"></div>
     <div class="container mx-auto px-4 py-12">
-        <header class="text-center mb-12 relative">
-            <button id="darkModeToggle" class="absolute top-0 right-0 bg-frieren text-white p-2 rounded-full shadow-lg transition-colors duration-300 hover:bg-frieren-dark">
-                <i class="fas fa-moon dark:hidden"></i>
-                <i class="fas fa-sun hidden dark:inline"></i>
+        <header class="text-center mb-12 relative animate-fadeInUp">
+            <div id="darkModeToggle" class="relative w-14 h-8 bg-gray-300 rounded-full shadow-inner transition-colors duration-300 dark:bg-gray-700 cursor-pointer">
                 <span class="sr-only">Cambiar modo</span>
-            </button>
+                <div class="absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ease-out translate-x-1 dark:translate-x-7">
+                  <i class="fas fa-moon absolute text-gray-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 dark:hidden"></i>
+                  <i class="fas fa-sun absolute text-yellow-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden dark:inline"></i>
+                </div>
+            </div>              
             <h1 class="text-5xl font-bold text-frieren-dark mb-2">staFF6773 / Not_staff</h1>
-            <img src="https://avatars.githubusercontent.com/u/108166164?v=4" alt="Foto de perfil" class="w-32 h-32 rounded-full mx-auto mb-4">
-            <p class="text-xl text-frieren">Desarrollador Web | Semi Full Stack</p>
+            <img src="https://avatars.githubusercontent.com/u/108166164?v=4" alt="Foto de perfil" class="w-32 h-32 rounded-full mx-auto mb-4 animate-fadeInUp animate-delay-100">
+            <p class="text-xl text-frieren animate-fadeInUp animate-delay-200">Desarrollador Web | Semi Full Stack</p>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <section id="sobre-mi" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+            <section id="sobre-mi" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-slideInFromLeft">
                 <h2 class="text-2xl font-bold text-frieren-dark mb-4">Sobre Mí</h2>
                 <p class="text-gray-700">Soy un desarrollador apasionado por crear aplicaciones web intuitivas y escalables. Con experiencia en múltiples tecnologías, me especializo en ofrecer soluciones que combinan funcionalidad y estética.</p>
             </section>
 
-            <section id="habilidades" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+            <section id="habilidades" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-slideInFromRight">
                 <h2 class="text-2xl font-bold text-frieren-dark mb-4">Habilidades</h2>
                 <ul class="grid grid-cols-2 gap-2">
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">HTML</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">Ejs</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">CSS</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">JavaScript</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">TypeScript</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">Python</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">Java</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">Node.js</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">Tailwind CSS</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center">GoLand</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">HTML</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Ejs</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">CSS</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">JavaScript</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">TypeScript</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Python</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Java</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Node.js</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Tailwind CSS</li>
+                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">GoLand</li>
                 </ul>
             </section>
 
-            <section id="proyectos" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2">
+            <section id="proyectos" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2 animate-fadeInUp animate-delay-300">
                 <h2 class="text-2xl font-bold text-frieren-dark mb-6">Proyectos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
-                        <img src="https://private-user-images.githubusercontent.com/174983432/380465931-6b762468-a93c-4ec7-9969-06ff664fe6d9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIyMjg3NzcsIm5iZiI6MTczMjIyODQ3NywicGF0aCI6Ii8xNzQ5ODM0MzIvMzgwNDY1OTMxLTZiNzYyNDY4LWE5M2MtNGVjNy05OTY5LTA2ZmY2NjRmZTZkOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQyMjM0MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNTYyMTkwOTQ1MGM5MThmNTNjMDE2YmY1MTc3YzY5ZDQ2NTdhNTdkOTRmYzU4NDU2NzVmYjQ0NWExNWIzMWNjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.DaDDxWJQRP2LAKL4qYyC5FgvWEA-6kt-Up-JdpWTJ08" alt="NakamaStream" class="w-full h-auto object-cover">
+                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
+                        <img src="https://github.com/NakamaStream/Resources/blob/main/NakamaStream.png?raw=true" alt="NakamaStream" class="w-full h-auto object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <h3 class="text-xl font-semibold text-frieren-dark mb-3">NakamaStream</h3>
                             <p class="text-gray-700 mb-4">NakamaStream es una plataforma de streaming gratuita diseñada para los entusiastas del anime, desarrollada por un equipo en América Latina. Nuestro objetivo es brindar acceso a contenido de anime a aquellos que no tienen los recursos para suscribirse a servicios legales de streaming.</p>
                             <a href="https://nakamastream.lat/" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
                         </div>
                     </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
+                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
                         <img src="https://raw.githubusercontent.com/Sstudios-Dev/Betterpvp-2.0/master/.github/BETTERPVP2.png" alt="Betterpvp-2.0" class="w-full h-auto object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <h3 class="text-xl font-semibold text-frieren-dark mb-3">Betterpvp-2.0</h3>
@@ -67,15 +71,15 @@
                             <a href="https://github.com/Sstudios-Dev/Betterpvp-2.0" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
                         </div>
                     </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
-                        <img src="https://private-user-images.githubusercontent.com/108166164/358884033-6490cae7-cbc9-4254-96cb-6a8a5bd38120.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIyMjg5ODAsIm5iZiI6MTczMjIyODY4MCwicGF0aCI6Ii8xMDgxNjYxNjQvMzU4ODg0MDMzLTY0OTBjYWU3LWNiYzktNDI1NC05NmNiLTZhOGE1YmQzODEyMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQyMjM4MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNWMxOTRiYWRkMmI4Y2EzYTVlMTQwMzk5NmM4MDFmNDhkMzkzZTZmYThmMGM1NzIzMTFlNzM0ZmYyYmU2MGYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.wEybM3PEDHwXA8pLxuqgcvZoqYaawl_naft-OhPGDkQ" alt="teaching-feeling---Launcher" class="w-full h-auto object-cover">
+                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
+                        <img src="https://github.com/SpanishHgames/teaching-feeling---Launcher/blob/main/src/img/358884033-6490cae7-cbc9-4254-96cb-6a8a5bd38120.png?raw=true" alt="teaching-feeling---Launcher" class="w-full h-auto object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <h3 class="text-xl font-semibold text-frieren-dark mb-3">teaching-feeling---Launcher</h3>
                             <p class="text-gray-700 mb-4">Este es un Launcher no oficial del juego Teaching Feeling con contenido para mayores de 18 años. El Launcher incluye versiones del juego creadas por fanáticos en varios idiomas, lo que permite a los jugadores disfrutar de la experiencia en su idioma preferido. 😗</p>
                             <a href="https://spanishhgames.netlify.app/" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
                         </div>
                     </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
+                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
                         <img src="https://github.com/KittyLinux2Win/KittyPhotos/raw/main/icon/KittyPhotos-Wiki-editor.png?raw=true" alt="KittyPhotos" class="w-full h-auto object-cover">
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <h3 class="text-xl font-semibold text-frieren-dark mb-3">KittyPhotos - Linux2Win</h3>
@@ -86,7 +90,7 @@
                 </div>
             </section>
             
-            <section id="contacto" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2">
+            <section id="contacto" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2 animate-fadeInUp animate-delay-300">
                 <h2 class="text-2xl font-bold text-frieren-dark mb-4">Contacto</h2>
                 <div class="space-y-4">
                     <p class="text-gray-700">
@@ -94,24 +98,24 @@
                     </p>
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-envelope text-frieren"></i>
-                        <a href="mailto:notstaffof@gmail.com" class="text-frieren hover:text-frieren-dark">notstaffof@gmail.com</a>
+                        <a href="mailto:notstaffof@gmail.com" class="text-frieren hover:text-frieren-dark transition duration-300">notstaffof@gmail.com</a>
                     </div>
                     <div class="mt-6">
                         <p class="text-gray-700">
                             También me puedes encontrar en mis redes sociales:
                         </p>
                         <div class="flex space-x-4 mt-2">
-                            <a href="https://github.com/staFF6773" class="text-frieren hover:text-frieren-dark">
-                                <i class="fab fa-github fa-lg"></i>
+                            <a href="https://github.com/staFF6773" class="text-frieren hover:text-frieren-dark transition duration-300">
+                                <i class="fab fa-github fa-lg hover-lift"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@notstaffofi_" class="text-frieren hover:text-frieren-dark">
-                                <i class="fab fa-tiktok fa-lg"></i>
+                            <a href="https://www.tiktok.com/@notstaffofi_" class="text-frieren hover:text-frieren-dark transition duration-300">
+                                <i class="fab fa-tiktok fa-lg hover-lift"></i>
                             </a>
-                            <a href="https://steamcommunity.com/profiles/76561199325937481/" class="text-frieren hover:text-frieren-dark">
-                                <i class="fab fa-steam fa-lg"></i>
+                            <a href="https://steamcommunity.com/profiles/76561199325937481/" class="text-frieren hover:text-frieren-dark transition duration-300">
+                                <i class="fab fa-steam fa-lg hover-lift"></i>
                             </a>
-                            <a href="https://discord.com/invite/Rdz4yQneMK" class="text-frieren hover:text-frieren-dark">
-                                <i class="fab fa-discord fa-lg"></i>
+                            <a href="https://discord.com/invite/Rdz4yQneMK" class="text-frieren hover:text-frieren-dark transition duration-300">
+                                <i class="fab fa-discord fa-lg hover-lift"></i>
                             </a>
                         </div>
                     </div>
