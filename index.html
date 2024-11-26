@@ -15,6 +15,26 @@
     <script src="./src/js/tailwind.config.js"></script>
 </head>
 <body class="bg-gradient-to-br from-frieren-light to-white min-h-screen font-frieren text-gray-800 transition-all duration-300">
+    <div class="fixed top-4 left-4">
+        <div class="w-16 h-16 border-l-4 border-t-4 border-frieren-dark opacity-60 rounded-tl-lg"></div>
+    </div>
+    
+    <div class="fixed top-4 right-4">
+        <div class="w-16 h-16 border-r-4 border-t-4 border-frieren-dark opacity-60 rounded-tr-lg"></div>
+    </div>
+    
+    <div class="fixed bottom-4 left-4">
+        <div class="w-16 h-16 border-l-4 border-b-4 border-frieren-dark opacity-60 rounded-bl-lg"></div>
+    </div>
+    
+    <div class="fixed bottom-4 right-4">
+        <div class="w-16 h-16 border-r-4 border-b-4 border-frieren-dark opacity-60 rounded-br-lg"></div>
+    </div>
+
+    <div class="fixed w-4 h-4 bg-frieren-dark opacity-20 rounded-full animate-float" style="top: 20%; left: 10%"></div>
+    <div class="fixed w-3 h-3 bg-frieren opacity-20 rounded-full animate-float-delayed" style="top: 40%; right: 15%"></div>
+    <div class="fixed w-2 h-2 bg-frieren-light opacity-20 rounded-full animate-float" style="bottom: 30%; left: 20%"></div>
+
     <div id="flower-container"></div>
     <div class="container mx-auto px-4 py-12">
         <header class="text-center mb-12 relative animate-fadeInUp">
@@ -38,18 +58,90 @@
 
             <section id="habilidades" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-slideInFromRight">
                 <h2 class="text-2xl font-bold text-frieren-dark mb-4">Habilidades</h2>
-                <ul class="grid grid-cols-2 gap-2">
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">HTML</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Ejs</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">CSS</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">JavaScript</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">TypeScript</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Python</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Java</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Node.js</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">Tailwind CSS</li>
-                    <li class="bg-frieren-light text-frieren-dark p-2 rounded text-center hover-lift">GoLand</li>
-                </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="skill-category">
+                        <h3 class="text-lg font-semibold text-frieren-dark mb-2">Lenguajes de Programación</h3>
+                        <ul class="space-y-3">
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">JavaScript</span>
+                                    <span class="text-frieren-dark">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">Python</span>
+                                    <span class="text-frieren-dark">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">Java</span>
+                                    <span class="text-frieren-dark">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">TypeScript</span>
+                                    <span class="text-frieren-dark">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="text-lg font-semibold text-frieren-dark mb-2">Tecnologías Web</h3>
+                        <ul class="space-y-3">
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">HTML5</span>
+                                    <span class="text-frieren-dark">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">CSS3</span>
+                                    <span class="text-frieren-dark">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">Node.js</span>
+                                    <span class="text-frieren-dark">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-frieren-dark">Tailwind CSS</span>
+                                    <span class="text-frieren-dark">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-frieren h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="proyectos" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2 animate-fadeInUp animate-delay-300">
