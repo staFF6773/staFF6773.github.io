@@ -2,125 +2,122 @@
     syntax: '<length>';
     initial-value: 30px;
     inherits: false;
-  }
-  
-  :root {
-    --animation-duration: 0.6s;
+}
+
+:root {
+    --animation-duration: 0.8s;
     --animation-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
     from {
-      opacity: 0;
+        opacity: 0;
+        transform: translateY(var(--slide-distance)) scale(0.95);
     }
     to {
-      opacity: 1;
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
-  }
-  
-  @keyframes fadeInUp {
+}
+
+@keyframes slideInFromLeft {
     from {
-      opacity: 0;
-      transform: translateY(var(--slide-distance));
+        opacity: 0;
+        transform: translateX(calc(-1 * var(--slide-distance))) rotate(-5deg);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateX(0) rotate(0);
     }
-  }
-  
-  @keyframes slideInFromLeft {
+}
+
+@keyframes slideInFromRight {
     from {
-      opacity: 0;
-      transform: translateX(calc(-1 * var(--slide-distance)));
+        opacity: 0;
+        transform: translateX(var(--slide-distance)) rotate(5deg) scale(0.95);
     }
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0) rotate(0) scale(1);
     }
-  }
-  
-  @keyframes slideInFromRight {
-    from {
-      opacity: 0;
-      transform: translateX(var(--slide-distance));
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .animate-fadeIn {
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); }
+}
+
+.animate-fadeIn {
     animation: fadeIn var(--animation-duration) var(--animation-easing);
     will-change: opacity;
-  }
-  
-  .animate-fadeInUp {
+}
+
+.animate-fadeInUp {
     animation: fadeInUp var(--animation-duration) var(--animation-easing);
     will-change: opacity, transform;
-  }
-  
-  .animate-slideInFromLeft {
+}
+
+.animate-slideInFromLeft {
     animation: slideInFromLeft var(--animation-duration) var(--animation-easing);
     will-change: opacity, transform;
-  }
-  
-  .animate-slideInFromRight {
+}
+
+.animate-slideInFromRight {
     animation: slideInFromRight var(--animation-duration) var(--animation-easing);
     will-change: opacity, transform;
-  }
-  
-  .animate-delay-100 {
-    animation-delay: 100ms;
-  }
-  
-  .animate-delay-200 {
-    animation-delay: 200ms;
-  }
-  
-  .animate-delay-300 {
-    animation-delay: 300ms;
-  }
-  
-  .hover-lift {
-    transition: transform 0.3s var(--animation-easing), opacity 0.3s var(--animation-easing);
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-3px) scale(1.02);
-    opacity: 0.95; 
-  }
-  
-  .hover-lift:active {
-    transform: translateY(0);
-    opacity: 1; 
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    :root {
-      --animation-duration: 0.01s;
-      --slide-distance: 0px;
-    }
-  
-    .hover-lift:hover {
-      transform: none;
-      opacity: 1;
-    }
-  }
+}
 
-  #darkModeToggle {
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+
+.hover-lift {
+    transition: transform 0.4s var(--animation-easing), opacity 0.4s var(--animation-easing), box-shadow 0.4s var(--animation-easing);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.05);
+    opacity: 0.95;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hover-lift:active {
+    transform: translateY(-3px) scale(1.02);
+    opacity: 0.98;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-duration: 0.01s;
+        --slide-distance: 0px;
+    }
+
+    .hover-lift:hover, .hover-lift:active {
+        transform: none;
+        opacity: 1;
+        box-shadow: none;
+    }
+}
+
+#darkModeToggle {
     position: relative;
     display: inline-block;
-    width: 3.5rem; /* 56px */
-    height: 2rem;  /* 32px */
+    width: 3.5rem;
+    height: 2rem;
     background-color: #e2e8f0;
     border-radius: 9999px;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     cursor: pointer;
-  }
-  
-  #darkModeToggle .sr-only {
+    overflow: hidden;
+}
+
+#darkModeToggle .sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -130,43 +127,79 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-  
-  #darkModeToggle:hover {
+}
+
+#darkModeToggle:hover {
     background-color: #d1d5db;
-  }
-  
-  #darkModeToggle:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#darkModeToggle:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.5);
-  }
-  
-  #darkModeToggle div {
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.5), 0 0 15px rgba(66, 153, 225, 0.4);
+}
+
+#darkModeToggle div {
     position: absolute;
-    top: 0.125rem; /* 2px */
-    left: 0.125rem; /* 2px */
-    width: 1.75rem; /* 28px */
-    height: 1.75rem; /* 28px */
+    top: 0.125rem;
+    left: 0.125rem;
+    width: 1.75rem;
+    height: 1.75rem;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  #darkModeToggle div i {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#darkModeToggle div i {
     font-size: 0.875rem;
     pointer-events: none;
-  }
-  
-  #darkModeToggle.dark {
+    transition: all 0.4s ease;
+}
+
+#darkModeToggle.dark {
     background-color: #4a5568;
-  }
-  
-  #darkModeToggle.dark div {
+    animation: pulseGlow 3s infinite;
+}
+
+#darkModeToggle.dark div {
     transform: translateX(1.75rem);
-  }
-  
-  #darkModeToggle.dark:hover {
     background-color: #2d3748;
-  }
-  
+}
+
+#darkModeToggle.dark:hover {
+    background-color: #2d3748;
+}
+
+#darkModeToggle::before,
+#darkModeToggle::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#darkModeToggle::before {
+    background: radial-gradient(circle at center, #ffd700 0%, transparent 70%);
+    transform: scale(0.8);
+}
+
+#darkModeToggle::after {
+    background: radial-gradient(circle at center, #6b46c1 0%, transparent 70%);
+    transform: scale(0.8);
+}
+
+#darkModeToggle:not(.dark):hover::before {
+    opacity: 0.7;
+    transform: scale(1);
+}
+
+#darkModeToggle.dark:hover::after {
+    opacity: 0.7;
+    transform: scale(1);
+}
