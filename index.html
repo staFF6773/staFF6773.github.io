@@ -1,179 +1,140 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notstaff - Portafolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/108166164?v=4" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="stylesheet" href="./src/css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <script src="./src/js/script.js"></script>
-    <script src="./src/js/tailwind.config.js"></script>
+    <title>not_staff</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="lang.js"></script>
 </head>
-<body class="bg-gradient-to-br from-frieren-light to-white min-h-screen font-frieren text-gray-800 transition-all duration-300">
-    <div class="fixed top-4 left-4">
-        <div class="w-16 h-16 border-l-4 border-t-4 border-frieren-dark opacity-60 rounded-tl-lg"></div>
-    </div>
-    
-    <div class="fixed top-4 right-4">
-        <div class="w-16 h-16 border-r-4 border-t-4 border-frieren-dark opacity-60 rounded-tr-lg"></div>
-    </div>
-    
-    <div class="fixed bottom-4 left-4">
-        <div class="w-16 h-16 border-l-4 border-b-4 border-frieren-dark opacity-60 rounded-bl-lg"></div>
-    </div>
-    
-    <div class="fixed bottom-4 right-4">
-        <div class="w-16 h-16 border-r-4 border-b-4 border-frieren-dark opacity-60 rounded-br-lg"></div>
-    </div>
-
-    <div class="fixed w-4 h-4 bg-frieren-dark opacity-20 rounded-full animate-float" style="top: 20%; left: 10%"></div>
-    <div class="fixed w-3 h-3 bg-frieren opacity-20 rounded-full animate-float-delayed" style="top: 40%; right: 15%"></div>
-    <div class="fixed w-2 h-2 bg-frieren-light opacity-20 rounded-full animate-float" style="bottom: 30%; left: 20%"></div>
-
-    <div id="flower-container"></div>
-    <div class="container mx-auto px-4 py-12">
-        <header class="text-center mb-12 relative animate-fadeInUp">
-            <div id="darkModeToggle" class="relative w-14 h-8 bg-gray-300 rounded-full shadow-inner transition-colors duration-300 dark:bg-gray-700 cursor-pointer">
-                <span class="sr-only">Cambiar modo</span>
-                <div class="absolute w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ease-out translate-x-1 dark:translate-x-7">
-                  <i class="fas fa-moon absolute text-gray-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 dark:hidden"></i>
-                  <i class="fas fa-sun absolute text-yellow-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden dark:inline"></i>
+<body>
+    <!-- CubicLauncher Modal -->
+    <div id="cubicModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2> CubicLauncher</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="launcher-preview">
+                    <img src="https://raw.githubusercontent.com/CubicLauncher/.github/main/launcher-preview.png" alt="CubicLauncher Preview">
                 </div>
-            </div>              
-            <h1 class="text-5xl font-bold text-frieren-dark mb-2">staFF6773 / Not_staff</h1>
-            <img src="https://avatars.githubusercontent.com/u/108166164?v=4" alt="Foto de perfil" class="w-32 h-32 rounded-full mx-auto mb-4 animate-fadeInUp animate-delay-100">
-            <p class="text-xl text-frieren animate-fadeInUp animate-delay-200">Desarrollador Web | Semi Full Stack</p>
+                <p data-es>¡Mejora tu experiencia de Minecraft con CubicLauncher! Un launcher rápido, personalizable y de código abierto.</p>
+                <p data-en>Enhance your Minecraft experience with CubicLauncher! A fast, customizable, and open-source launcher.</p>
+                <a href="https://github.com/CubicLauncher/CubicLauncher" target="_blank" class="cta-button" data-es>Ver en GitHub</a>
+                <a href="https://github.com/CubicLauncher/CubicLauncher" target="_blank" class="cta-button" data-en>View on GitHub</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="language-selector">
+            <button onclick="changeLanguage('es')" data-lang="es">ES</button>
+            <button onclick="changeLanguage('en')" data-lang="en" class="active">EN</button>
+        </div>
+        
+        <header>
+            <div class="profile-pic">
+                <img src="https://avatars.githubusercontent.com/u/108166164?v=4" alt="Foto de perfil" class="github-avatar">
+            </div>
+            <h1>not_staff / staFF6773</h1>
+            <p class="tagline" data-es>Desarrollador | Freelancer</p>
+            <p class="tagline" data-en>Developer | Freelancer</p>
         </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <section id="sobre-mi" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-slideInFromLeft">
-                <h2 class="text-2xl font-bold text-frieren-dark mb-4">Sobre Mí</h2>
-                <p class="text-gray-700">Soy un desarrollador apasionado por crear aplicaciones web intuitivas y escalables. Con experiencia en múltiples tecnologías, me especializo en ofrecer soluciones que combinan funcionalidad y estética.</p>
+        
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi"><span data-es>Sobre mí</span><span data-en>About me</span></a></li>
+                <li><a href="#habilidades"><span data-es>Habilidades</span><span data-en>Skills</span></a></li>
+                <li><a href="#contacto"><span data-es>Contacto</span><span data-en>Contact</span></a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="sobre-mi">
+                <h2 data-es>Sobre mí</h2>
+                <h2 data-en>About me</h2>
+                <p data-es>Soy un desarrollador que programa en su tiempo libre y que cuenta con varios años de experiencia en el ámbito de la programación. Me enfoco en trabajar en proyectos que realmente me interesan y disfruto. Asimismo, estoy abierto a nuevas oportunidades laborales y las considero cuando se presentan.</p>
+                <p data-en>I'm a developer who programs in my free time with several years of experience in the programming field. I focus on working on projects that truly interest and excite me. I'm also open to new job opportunities and consider them when they arise.</p>
             </section>
-
-            <section id="habilidades" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-slideInFromRight">
-                <h2 class="text-2xl font-bold text-frieren-dark mb-4">Habilidades</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <section id="habilidades">
+                <h2 data-es>Habilidades</h2>
+                <h2 data-en>Skills</h2>
+                <div class="skills-container">
                     <div class="skill-category">
-                        <h3 class="text-lg font-semibold text-frieren-dark mb-2">Lenguajes de Programación</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <i class="fab fa-js text-yellow-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">JavaScript</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fab fa-python text-blue-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">Python</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fab fa-java text-red-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">Java</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span class="text-blue-600 font-bold text-xl mr-2">TS</span>
-                                <span class="text-frieren-dark">TypeScript</span>
-                            </li>
+                        <h3 data-es>Lenguajes de Programación</h3>
+                        <h3 data-en>Programming Languages</h3>
+                        <ul class="skills-list">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>TypeScript</li>
+                            <li>Golang</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3 class="text-lg font-semibold text-frieren-dark mb-2">Tecnologías Web</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <i class="fab fa-html5 text-orange-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">HTML5</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fab fa-css3-alt text-blue-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">CSS3</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fab fa-node-js text-green-500 text-2xl mr-2"></i>
-                                <span class="text-frieren-dark">Node.js</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span class="text-teal-500 font-bold text-xl mr-2">TW</span>
-                                <span class="text-frieren-dark">Tailwind CSS</span>
-                            </li>
+                        <h3 data-es>Frameworks y Herramientas</h3>
+                        <h3 data-en>Frameworks & Tools</h3>
+                        <ul class="skills-list">
+                            <li>Vue</li>
+                            <li>Tailwind</li>
+                            <li>Node.js</li>
+                            <li>Git</li>
                         </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="proyectos" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2 animate-fadeInUp animate-delay-300">
-                <h2 class="text-2xl font-bold text-frieren-dark mb-6">Proyectos</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
-                        <img src="https://github.com/NakamaStream/Resources/blob/main/NakamaStream.png?raw=true" alt="NakamaStream" class="w-full h-auto object-cover">
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <h3 class="text-xl font-semibold text-frieren-dark mb-3">NakamaStream</h3>
-                            <p class="text-gray-700 mb-4">NakamaStream es una plataforma de streaming gratuita diseñada para los entusiastas del anime, desarrollada por un equipo en América Latina. Nuestro objetivo es brindar acceso a contenido de anime a aquellos que no tienen los recursos para suscribirse a servicios legales de streaming.</p>
-                            <a href="https://nakamastream.lat/" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
-                        </div>
-                    </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
-                        <img src="https://raw.githubusercontent.com/Sstudios-Dev/Betterpvp-2.0/master/.github/BETTERPVP2.png" alt="Betterpvp-2.0" class="w-full h-auto object-cover">
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <h3 class="text-xl font-semibold text-frieren-dark mb-3">Betterpvp-2.0</h3>
-                            <p class="text-gray-700 mb-4">BetterPvP es un Plugin de Minecraft diseñado para la comunidad de Minecraft, que se centra en gestionar y mejorar la dinámica jugador contra jugador (PvP) dentro del juego. Este complemento proporciona una variedad de herramientas y configuraciones destinadas a equilibrar la experiencia de combate entre los jugadores, fomentando un entorno competitivo y equitativo. Desde ajustes de reglas hasta funciones de seguimiento y análisis estadístico, BetterPvP se ha convertido en un componente esencial para los servidores que buscan ofrecer una experiencia PvP refinada, atendiendo tanto a jugadores casuales como competitivos.</p>
-                            <a href="https://github.com/Sstudios-Dev/Betterpvp-2.0" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
-                        </div>
-                    </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
-                        <img src="https://github.com/SpanishHgames/teaching-feeling---Launcher/blob/main/src/img/358884033-6490cae7-cbc9-4254-96cb-6a8a5bd38120.png?raw=true" alt="teaching-feeling---Launcher" class="w-full h-auto object-cover">
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <h3 class="text-xl font-semibold text-frieren-dark mb-3">teaching-feeling---Launcher</h3>
-                            <p class="text-gray-700 mb-4">Este es un Launcher no oficial del juego Teaching Feeling con contenido para mayores de 18 años. El Launcher incluye versiones del juego creadas por fanáticos en varios idiomas, lo que permite a los jugadores disfrutar de la experiencia en su idioma preferido. 😗</p>
-                            <a href="https://spanishhgames.netlify.app/" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
-                        </div>
-                    </div>
-                    <div class="bg-frieren-light rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 flex flex-col hover-lift">
-                        <img src="https://github.com/KittyLinux2Win/KittyPhotos/raw/main/icon/KittyPhotos-Wiki-editor.png?raw=true" alt="KittyPhotos" class="w-full h-auto object-cover">
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <h3 class="text-xl font-semibold text-frieren-dark mb-3">KittyPhotos - Linux2Win</h3>
-                            <p class="text-gray-700 mb-4">KittyPhotos es una aplicación diseñada originalmente para Linux para visualizar imágenes, pero que ha sido adaptada para sistemas Windows 10/11. Su interfaz de usuario (UI) es más común en Linux, lo que facilita la experiencia a quienes están acostumbrados a ese entorno, permitiendo visualizar y administrar imágenes de manera eficiente.</p>
-                            <a href="https://github.com/KittyLinux2Win/KittyPhotos" class="text-frieren hover:text-frieren-dark transition duration-300 mt-auto inline-block">Ver proyecto →</a>
-                        </div>
                     </div>
                 </div>
             </section>
             
-            <section id="contacto" class="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-lg md:col-span-2 animate-fadeInUp animate-delay-300">
-                <h2 class="text-2xl font-bold text-frieren-dark mb-4">Contacto</h2>
-                <div class="space-y-4">
-                    <p class="text-gray-700">
-                        Actualmente no contamos con un formulario de contacto, pero puede comunicarse a través de los siguientes medios:
-                    </p>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-envelope text-frieren"></i>
-                        <a href="mailto:notstaffof@gmail.com" class="text-frieren hover:text-frieren-dark transition duration-300">notstaffof@gmail.com</a>
-                    </div>
-                    <div class="mt-6">
-                        <p class="text-gray-700">
-                            También me puedes encontrar en mis redes sociales:
-                        </p>
-                        <div class="flex space-x-4 mt-2">
-                            <a href="https://github.com/staFF6773" class="text-frieren hover:text-frieren-dark transition duration-300">
-                                <i class="fab fa-github fa-lg hover-lift"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@notstaffofi_" class="text-frieren hover:text-frieren-dark transition duration-300">
-                                <i class="fab fa-tiktok fa-lg hover-lift"></i>
-                            </a>
-                            <a href="https://steamcommunity.com/profiles/76561199325937481/" class="text-frieren hover:text-frieren-dark transition duration-300">
-                                <i class="fab fa-steam fa-lg hover-lift"></i>
-                            </a>
-                            <a href="https://discord.com/invite/Rdz4yQneMK" class="text-frieren hover:text-frieren-dark transition duration-300">
-                                <i class="fab fa-discord fa-lg hover-lift"></i>
-                            </a>
-                        </div>
-                    </div>
+            <section id="contacto">
+                <h2 data-es>Contacto</h2>
+                <h2 data-en>Contact</h2>
+                <p data-es>Puedes encontrar mi trabajo en GitHub</p>
+                <p data-en>You can find my work on GitHub</p>
+                <div class="social-links">
+                    <a href="https://github.com/staFF6773" class="social-icon">GitHub</a>
+                    <a href="https://www.reddit.com/user/RevolutionStrange/" class="social-icon">Reddit</a>
+                    <a href="https://www.youtube.com/@not_staff" class="social-icon">Youtube</a>
                 </div>
             </section>
-        </div>
+        </main>
+        
+        <footer>
+            <p data-es>&copy; <span id="year"></span> not_staff. Todos los derechos reservados.</p>
+            <p data-en>&copy; <span id="year-en"></span> not_staff. All rights reserved.</p>
+        </footer>
     </div>
+    
+    <script>
+        const year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+        document.getElementById('year-en').textContent = year;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('cubicModal');
+            const closeBtn = document.querySelector('.close');
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
