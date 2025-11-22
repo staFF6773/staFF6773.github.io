@@ -1,8 +1,1 @@
-## Portafilio
-
-![image](https://github.com/user-attachments/assets/81518e63-1119-43ad-8f66-dfe2f6744653)
-
-
-
-# Informacion
-Mi Pórtafolio oficial de trabajo
+<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/656aad3a-2500-4906-bbf0-d5bd4542cae9" />
