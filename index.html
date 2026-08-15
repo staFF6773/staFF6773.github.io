@@ -1,262 +1,100 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>~*~ not_staff's HOMEPAGE ~*~</title>
-    <meta name="description" content="not_staff / staFF6773 — Developer & Freelancer portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>staFF6773 — Desarrollador</title>
+
+    <!-- Fuentes: Inter para texto, JetBrains Mono para detalles técnicos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
-    <script src="lang.js"></script>
+
 </head>
+<body>
 
-<body bgcolor="#000000" text="#CCCCCC" link="#888888" vlink="#AAAAAA" alink="#EEEEEE">
+    <div class="container">
+        <!-- Barra superior -->
+        <header class="top-bar">
+            <a href="#" class="logo">
+                <span class="logo-dot"></span>
+                staFF6773
+            </a>
+            <nav class="social-links" aria-label="Redes sociales">
+                <a href="https://github.com/staFF6773" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://discord.gg/7VaqSrPukm" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord" title="Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+            </nav>
+        </header>
 
-    <!-- Top Banner -->
-    <table width="100%" border="5" bordercolor="#666666" cellspacing="0" cellpadding="10" bgcolor="#222222">
-        <tr>
-            <td align="center">
-                <h1>
-                    <marquee scrollamount="10" width="80%">
-                        <font color="#FFFFFF" size="6"><span data-es>*** ¡BIENVENIDO A MI PÁGINA WEB! ***</span><span
-                                data-en>*** WELCOME TO MY HOMEPAGE! ***</span></font>
-                    </marquee>
-                </h1>
-                <blink><b>
-                        <font color="#CCCCCC"><span data-es>¡Mejor visto en Netscape Navigator 4.0!</span><span
-                                data-en>Best viewed in Netscape Navigator 4.0!</span></font>
-                    </b></blink>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table width="100%" border="0" cellspacing="5" cellpadding="5">
-        <tr>
-            <!-- Sidebar Navigation -->
-            <td width="20%" valign="top">
-                <table width="100%" border="3" bordercolor="#777777" cellpadding="10" bgcolor="#111111">
-                    <tr>
-                        <td align="center">
-                            <img src="https://avatars.githubusercontent.com/u/108166164?v=4" width="120" alt="Me"
-                                border="2">
-                            <br><br>
-                            <b>
-                                <font color="#FFFFFF">not_staff / staFF6773</font>
-                            </b>
-                            <br>
-                            <i data-es>Desarrollador | Freelancer</i>
-                            <i data-en>Developer | Freelancer</i>
-                            <br><br>
-
-                            <!-- Language Selector -->
-                            <div class="language-selector">
-                                <button onclick="changeLanguage('es')" data-lang="es">ES</button>
-                                <button onclick="changeLanguage('en')" data-lang="en">EN</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-
-                <table width="100%" border="3" bordercolor="#666666" cellpadding="10" bgcolor="#222222">
-                    <tr>
-                        <td>
-                            <b><span data-es>NAVEGACIÓN</span><span data-en>NAVIGATION</span></b>
-                            <hr>
-                            <a href="#about">> <span data-es>Sobre mí</span><span data-en>About me</span></a><br><br>
-                            <a href="#skills">> <span data-es>Habilidades</span><span data-en>Skills</span></a><br><br>
-                            <a href="#projects">> <span data-es>Proyectos</span><span
-                                    data-en>Projects</span></a><br><br>
-                            <a href="#contact">> <span data-es>Contacto</span><span data-en>Contact</span></a><br><br>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-                <center>
-                    <!-- Flame GIFs using external URL -->
-                    <img src="https://web.archive.org/web/20090829035654im_/http://www.geocities.com/SouthBeach/Marina/1666/flames.gif"
-                        alt="Flames" width="100%">
-                </center>
-            </td>
-
-            <td width="2%"></td> <!-- Spacer -->
-
-            <!-- Main Content Area -->
-            <td width="78%" valign="top">
-
-                <!-- About Section -->
-                <a name="about"></a>
-                <table width="100%" border="4" cellpadding="15" bordercolor="#555555" bgcolor="#222222">
-                    <tr>
-                        <td>
-                            <h2 data-es><u>Sobre mí</u></h2>
-                            <h2 data-en><u>About me</u></h2>
-                            <center><img
-                                    src="https://web.archive.org/web/20090829012354im_/http://www.geocities.com/SouthBeach/Marina/1666/bar.gif"
-                                    width="100%" height="8"></center>
-                            <p data-es>Soy un desarrollador que programa en su tiempo libre y que cuenta con varios años
-                                de
-                                experiencia en el ámbito de la programación. Me enfoco en trabajar en proyectos que
-                                realmente me
-                                interesan y disfruto. Asimismo, estoy abierto a nuevas oportunidades laborales y las
-                                considero
-                                cuando se presentan.</p>
-                            <p data-en>I'm a developer who programs in my free time with several years of experience in
-                                the
-                                programming field. I focus on working on projects that truly interest and excite me. I'm
-                                also open
-                                to new job opportunities and consider them when they arise.</p>
-                            <center><span class="blink">
-                                    <font color="#FFFFFF">Hire me!</font>
-                                </span></center>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-
-                <!-- Skills Section -->
-                <a name="skills"></a>
-                <table width="100%" border="4" cellpadding="15" bordercolor="#666666" bgcolor="#1A1A1A">
-                    <tr>
-                        <td>
-                            <h2 data-es><u>Habilidades</u></h2>
-                            <h2 data-en><u>Skills</u></h2>
-                            <center><img
-                                    src="https://web.archive.org/web/20090829012354im_/http://www.geocities.com/SouthBeach/Marina/1666/bar.gif"
-                                    width="100%" height="8"></center>
-
-                            <table width="100%" cellspacing="5">
-                                <tr>
-                                    <td width="50%" valign="top" bgcolor="#111111">
-                                        <h3 data-es>Lenguajes de Programación</h3>
-                                        <h3 data-en>Programming Languages</h3>
-                                        <ul>
-                                            <li>Java</li>
-                                            <li>Python</li>
-                                            <li>TypeScript</li>
-                                            <li>Golang</li>
-                                        </ul>
-                                    </td>
-                                    <td width="50%" valign="top" bgcolor="#111111">
-                                        <h3 data-es>Frameworks y Herramientas</h3>
-                                        <h3 data-en>Frameworks & Tools</h3>
-                                        <ul>
-                                            <li>Vue</li>
-                                            <li>Tailwind <font color="#AAAAAA"><i>(Just kidding, I don't need CSS!)</i>
-                                                </font>
-                                            </li>
-                                            <li>Node.js</li>
-                                            <li>Git</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-
-                <!-- Projects Section -->
-                <a name="projects"></a>
-                <table width="100%" border="4" cellpadding="15" bordercolor="#444444" bgcolor="#222222">
-                    <tr>
-                        <td>
-                            <h2 data-es><u>Proyectos</u></h2>
-                            <h2 data-en><u>Projects</u></h2>
-                            <center><img
-                                    src="https://web.archive.org/web/20090829012354im_/http://www.geocities.com/SouthBeach/Marina/1666/bar.gif"
-                                    width="100%" height="8"></center>
-
-                            <h3><img src="https://web.archive.org/web/20091027083041im_/http://www.geocities.com/Area51/Rampart/9292/new.gif"
-                                    alt="NEW!"> CubicLauncher</h3>
-                            <center><img src="https://i.ibb.co/mr8V72cP/2026-02-01-13-08.png"
-                                    alt="CubicLauncher Preview" width="300" border="2"></center>
-                            <p data-es>¡Mejora tu experiencia de Minecraft con CubicLauncher! Un launcher rápido,
-                                personalizable y
-                                de código abierto.</p>
-                            <p data-en>Enhance your Minecraft experience with CubicLauncher! A fast, customizable, and
-                                open-source
-                                launcher.</p>
-
-                            <center>
-                                <a href="https://github.com/CubicLauncher/CubicLauncher" target="_blank">
-                                    <button class="retro-button" data-es>Ver en GitHub</button>
-                                    <button class="retro-button" data-en>View on GitHub</button>
-                                </a>
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-
-                <!-- Contact Section -->
-                <a name="contact"></a>
-                <table width="100%" border="4" cellpadding="15" bordercolor="#666666" bgcolor="#1A1A1A">
-                    <tr>
-                        <td>
-                            <h2 data-es><u>Contacto</u></h2>
-                            <h2 data-en><u>Contact</u></h2>
-                            <p data-es>Puedes encontrar mi trabajo en GitHub</p>
-                            <p data-en>You can find my work on GitHub</p>
-                            <ul>
-                                <li><a href="https://github.com/staFF6773"><b>GitHub</b></a></li>
-                                <li><a href="https://www.reddit.com/user/RevolutionStrange/"><b>Reddit</b></a></li>
-                                <li><a href="https://www.youtube.com/@not_staff"><b>Youtube</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-
-                <br>
-                <center>
-                    <!-- 88x31 Web 1.0 Buttons -->
-                    <div style="margin-top: 20px; margin-bottom: 20px;">
-                        <img src="https://cyber.dabamos.de/88x31/peace.gif" alt="Stop War" width="88" height="31"
-                            border="1" style="margin: 2px;">
-                        <img src="https://cyber.dabamos.de/88x31/weed.gif" alt="Legalize Marihuana" width="88"
-                            height="31" border="1" style="margin: 2px;">
-                        <img src="https://cyber.dabamos.de/88x31/netscape.gif" alt="Netscape Now" width="88" height="31"
-                            border="1" style="margin: 2px;">
-                        <img src="https://cyber.dabamos.de/88x31/geocities.gif" alt="GeoCities" width="88" height="31"
-                            border="1" style="margin: 2px;">
-                        <img src="https://cyber.dabamos.de/88x31/linux.gif" alt="Linux System" width="88" height="31"
-                            border="1" style="margin: 2px;">
-                        <img src="https://cyber.dabamos.de/88x31/notepad.gif" alt="Made with Notepad" width="88"
-                            height="31" border="1" style="margin: 2px;">
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Introducción con foto de GitHub -->
+            <div class="intro">
+                <!-- Reemplaza el src si tu avatar no está en staFF6773.png -->
+                <img 
+                    src="https://github.com/staFF6773.png" 
+                    alt="Foto de perfil de GitHub de staFF6773" 
+                    class="intro-avatar" 
+                    onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23111111%22/%3E%3Ctext x=%2250%22 y=%2255%22 font-family=%22monospace%22 font-size=%2240%22 fill=%22%23666666%22 text-anchor=%22middle%22%3E%3F%3C/text%3E%3C/svg%3E';"
+                >
+                <div class="intro-text">
+                    <h1 class="name">staFF6773</h1>
+                    <p class="role">Desarrollador freelance</p>
+                    <div class="status-line">
+                        <span class="status-dot"></span>
+                        Actualmente trabajando en
                     </div>
+                </div>
+            </div>
 
-                    <!-- Under Construction GIF -->
-                    <img src="https://web.archive.org/web/20091027060717im_/http://geocities.com/CapitolHill/Senate/9338/undercon.gif"
-                        alt="Under Construction">
-                    <br><br>
-                    <p><b>
-                            <font color="#CCCCCC"><span data-es>Eres el visitante número:</span><span data-en>You are
-                                    visitor number:</span></font>
-                        </b></p>
-                    <table border="5" cellpadding="5" bordercolor="#888888" bgcolor="#000000">
-                        <tr>
-                            <td>
-                                <font color="#FFFFFF" size="6" face="Courier New"><b> 0 1 3 3 7 4 2 </b></font>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
+            <!-- Enlace al proyecto actual -->
+            <a href="https://github.com/CubicLauncherDevs/CubicLauncher" target="_blank" rel="noopener noreferrer" class="project-card">
+                <div class="project-info">
+                    <span class="project-label">Proyecto activo</span>
+                    <span class="project-name">CubicLauncher</span>
+                </div>
+                <span class="project-arrow">→</span>
+            </a>
 
-                <br><br>
-                <p align="center" style="font-size: small;">
-                    <span data-es>&copy; 2026 not_staff. Amo el codigo abierto &lt;3</span>
-                    <span data-en>&copy; 2026 not_staff. I love open source code &lt;3</span>
-                </p>
-            </td>
-        </tr>
-    </table>
+            <!-- Sección de commits recientes -->
+            <div class="commits-section">
+                <div class="commits-header">Últimos commits</div>
+                <div id="commitsContainer" class="commits-list">
+                    <div class="loading-commits">Cargando commits...</div>
+                </div>
+            </div>
 
+            <!-- Nota sutil -->
+            <p class="note">
+                // Este espacio se actualizará con nueva información<br>
+                // cuando haya más proyectos que mostrar.
+            </p>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <span>© <span id="year"></span> staFF6773</span>
+            <nav class="social-links" aria-label="Redes sociales">
+                <a href="https://github.com/staFF6773" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://discord.gg/7VaqSrPukm" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord" title="Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+            </nav>
+            <span>
+                <span class="heart">♥</span> hecho con código
+            </span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
