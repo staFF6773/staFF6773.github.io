@@ -63,6 +63,27 @@
                 <span class="project-arrow">→</span>
             </a>
 
+            <!-- Stats de descargas del launcher (GitHub Releases) -->
+            <div class="stats-section">
+                <div class="stat">
+                    <span class="stat-label">Descargas totales</span>
+                    <span id="totalDownloads" class="stat-value">Cargando...</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Última versión</span>
+                    <span id="latestVersion" class="stat-value">—</span>
+                </div>
+            </div>
+
+            <!-- Gráfico de descargas por release -->
+            <div class="downloads-section">
+                <div class="downloads-header">Descargas por release</div>
+                <div id="downloadsChart" class="downloads-chart">
+                    <div class="loading-commits">Cargando descargas...</div>
+                </div>
+                <p id="downloadsNote" class="downloads-note"></p>
+            </div>
+
             <!-- Sección de commits recientes -->
             <div class="commits-section">
                 <div class="commits-header">Últimos commits</div>
